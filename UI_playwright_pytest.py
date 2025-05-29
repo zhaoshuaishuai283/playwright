@@ -9,9 +9,9 @@ def test_login_insight(page: Page) -> None:
     page.goto("https://test-login.ke.com/login?service=http%3A%2F%2Ftest1-huiting.ttb.test.ke.com%2Flogin%2Fcas?rurl=http%253A%252F%252Ftest1-huiting.ttb.test.ke.com%252FtaskCenter")
     page.get_by_role("link", name="账号登录").click()
     page.get_by_role("textbox", name="请输入手机号/系统号/账号").click()
-    page.get_by_role("textbox", name="请输入手机号/系统号/账号").fill("27151339")
+    page.get_by_role("textbox", name="请输入手机号/系统号/账号").fill("username")
     page.get_by_role("textbox", name="请输入密码").click()
-    page.get_by_role("textbox", name="请输入密码").fill("H0meL1nk")
+    page.get_by_role("textbox", name="请输入密码").fill("password")
     page.get_by_role("button", name="登 录").click()
     expect(page.get_by_role("menuitem", name="智能任务中心").locator("span")).to_be_visible()
 
@@ -27,9 +27,9 @@ def test_debug_offline(page: Page) -> None:
         "https://test-login.ke.com/login?service=http%3A%2F%2Ftest1-huiting.ttb.test.ke.com%2Flogin%2Fcas?rurl=http%253A%252F%252Ftest1-huiting.ttb.test.ke.com%252FtaskCenter")
     page.get_by_role("link", name="账号登录").click()
     page.get_by_role("textbox", name="请输入手机号/系统号/账号").click()
-    page.get_by_role("textbox", name="请输入手机号/系统号/账号").fill("27151339")
+    page.get_by_role("textbox", name="请输入手机号/系统号/账号").fill("username")
     page.get_by_role("textbox", name="请输入密码").click()
-    page.get_by_role("textbox", name="请输入密码").fill("H0meL1nk")
+    page.get_by_role("textbox", name="请输入密码").fill("password")
     page.get_by_role("button", name="登 录").click()
     expect(page.get_by_role("menuitem", name="智能任务中心").locator("span")).to_be_visible()
 
